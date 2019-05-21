@@ -1,0 +1,64 @@
+{
+  "constants": {
+    "@main-font": [ "noto-mix", "noto-cjk" ]
+  },
+  "fonts": {
+    "noto-mix": "//cdn.melown.com/libs/vtsjs/fonts/noto-extended/1.0.0/noto.fnt",
+    "noto-cjk": "//cdn.melown.com/libs/vtsjs/fonts/noto-cjk/1.0.0/noto.fnt",
+    "#default": "//cdn.melown.com/libs/vtsjs/fonts/noto-basic/1.0.0/noto.fnt"
+  },
+  "layers": {
+    "state-boundaries": {
+      "filter": [
+        "all",
+        [ "==", "#group", "boundary" ],
+        [ "==", "$admin_level", "4" ],
+        [ "!=", "$maritime", "1" ]
+      ],
+      "line": true,
+      "line-flat": false,
+      "line-width": 4,
+      "line-color": [ 255, 255, 0, 80 ],
+      "zbuffer-offset": [ -0.01, 0, 0 ]
+    },
+    "roads": {
+      "filter": [
+        "all",
+        [ "==", "#group", "transportation" ],
+        [ "in", "$class", "secondary", "tertiary" ]
+      ],
+      "line": true,
+      "line-flat": true,
+      "line-width": { "lod-scaled": [ 14, 10, 1 ] },
+      "line-color": [ 255, 255, 255, 120 ],
+      "zbuffer-offset": [ -10, -50, -50 ]
+    },
+    "city-labels": {
+      "filter": [
+        "all",
+        [ "==", "#group", "place" ],
+        [ "==", "$class", "city" ]
+      ],
+      "label": true,
+      "label-size": 19,
+      "label-font": "@main-font",
+      "label-source": "$name",
+      "zbuffer-offset": [ -0.15, 0, 0 ],
+      "z-index": 1,
+      "culling": 89
+    },
+    "peaks": {
+      "filter": [
+        "all",
+        [ "==", "#group", "mountain_peak" ]
+      ],
+      "label": true,
+      "label-stick": [ 70, 5, 2, 255, 255, 255, 128 ],
+      "label-size": 19,
+      "label-font": "@main-font",
+      "label-source": "$name",
+      "zbuffer-offset": [ -0.15, 0, 0 ],
+      "z-index": 1
+    }
+  }
+}

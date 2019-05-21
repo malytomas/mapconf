@@ -245,28 +245,63 @@
 	"version" : 1,
 	"view" : 
 	{
-		"freeLayers" : 
-		{
-			"osm" : 
-			{
-				"style" : "//cdn.melown.com/vts/melown2015/stylesheet/seznamcz-outdoor/mapycz.json"
-			},
-			"peaklist-org-ultras" : 
-			{
-				"style" : "//cdn.melown.com/vts/melown2015/stylesheet/seznamcz-outdoor/ultras.json"
-			}
-		},
 		"surfaces" : 
 		{
-			"world" : 
-			[
-				"seznamcz-outdoor",
-				"seznamcz-outdoor-north-pole",
-				"seznamcz-outdoor-south-pole"
-			]
+			"world" : []
 		}
 	},
 	"namedViews" : 
 	{
+		"compat" : 
+		{
+			"freeLayers" : 
+			{
+				"osm" : 
+				{
+					"style" : "compat.json"
+				}
+			},
+			"surfaces" : 
+			{
+				"world" : []
+			}
+		},
+		"precise" : 
+		{
+			"freeLayers" : 
+			{
+				"osm" : 
+				{
+					"style" : "precise.json"
+				}
+			},
+			"surfaces" : 
+			{
+				"world" : []
+			}
+		},
+		"original" : 
+		{
+			"freeLayers" : 
+			{
+				"osm" : 
+				{
+					"style" : "//cdn.melown.com/vts/melown2015/stylesheet/seznamcz-outdoor/mapycz.json"
+				},
+				"peaklist-org-ultras" : 
+				{
+					"style" : "//cdn.melown.com/vts/melown2015/stylesheet/seznamcz-outdoor/ultras.json"
+				}
+			},
+			"surfaces" : 
+			{
+				"world" : 
+				[
+					"seznamcz-outdoor",
+					"seznamcz-outdoor-north-pole",
+					"seznamcz-outdoor-south-pole"
+				]
+			}
+		}
 	}
 }
