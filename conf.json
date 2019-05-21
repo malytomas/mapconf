@@ -21,6 +21,14 @@
 			"comment" : "Sol, G2V main-sequence star."
 		}
 	},
+	"credits" : 
+	{
+		"douglas" : 
+		{
+			"id" : 42,
+			"notice" : "Douglas Adams"
+		}
+	},
 	"boundLayers" : 
 	{
 		"seznamcz-outdoor" : "//cdn.melown.com/vts/melown2015/imagery/global/seznamcz-outdoor/boundlayer.json",
