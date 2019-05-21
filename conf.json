@@ -1,0 +1,261 @@
+{
+	"bodies" : 
+	{
+		"Earth" : 
+		{
+			"atmosphere" : 
+			{
+				"colorHorizon" : [ 158, 206, 255, 255 ],
+				"colorZenith" : [ 62, 120, 229, 255 ],
+				"thickness" : 100000,
+				"visibility" : 100000
+			},
+			"class" : "planet",
+			"comment" : "Earth, Sol III, M-class planet.",
+			"defaultGeoidGrid" : "egm96_15.gtx",
+			"parent" : "Sun"
+		},
+		"Sun" : 
+		{
+			"class" : "star",
+			"comment" : "Sol, G2V main-sequence star."
+		}
+	},
+	"boundLayers" : 
+	{
+		"seznamcz-outdoor" : "//cdn.melown.com/vts/melown2015/imagery/global/seznamcz-outdoor/boundlayer.json",
+		"seznamcz-outdoor-north-pole" : "//cdn.melown.com/vts/melown2015/imagery/global/seznamcz-outdoor-north-pole/boundlayer.json",
+		"seznamcz-outdoor-south-pole" : "//cdn.melown.com/vts/melown2015/imagery/global/seznamcz-outdoor-south-pole/boundlayer.json"
+	},
+	"freeLayers" : 
+	{
+		"osm" : "//cdn.melown.com/vts/melown2015/features/global/osm-maptiler/freelayer.json",
+		"peaklist-org-ultras" : "//cdn.melown.com/vts/melown2015/features/global/peaklist-org-ultras/freelayer.json"
+	},
+	"position" : 
+	[
+		"obj",
+		15.419059000000001,
+		49.493133,
+		"fixed",
+		731.25999999999999,
+		0,
+		-90,
+		0,
+		2855318.0099999998,
+		45
+	],
+	"referenceFrame" : 
+	{
+		"body" : "Earth",
+		"description" : "Earth, global geographic reference frame (Melown 2015)",
+		"division" : 
+		{
+			"extents" : 
+			{
+				"ll" : [ -7500000, -7500000, -7500000 ],
+				"ur" : [ 7500000, 7500000, 7500000 ]
+			},
+			"heightRange" : [ -12000, 9500 ],
+			"nodes" : 
+			[
+				{
+					"extents" : 
+					{
+						"ll" : [ -20037508.342789002, -10018754.171394 ],
+						"ur" : [ 20037508.342789002, 10018754.171394 ]
+					},
+					"id" : 
+					{
+						"lod" : 0,
+						"position" : [ 0, 0 ]
+					},
+					"partitioning" : 
+					{
+						"00" : 
+						{
+							"ll" : [ -20037508.342799999, -9467848.3472000007 ],
+							"ur" : [ 20037508.342799999, 9467848.3472000007 ]
+						},
+						"01" : 
+						{
+							"ll" : [ -20037508.342799999, 9467848.3471611794 ],
+							"ur" : [ 20037508.342799999, 10018754.171399999 ]
+						},
+						"10" : 
+						{
+							"ll" : [ -20037508.342799999, -10018754.171399999 ],
+							"ur" : [ 20037508.342799999, -9467848.3471611794 ]
+						}
+					},
+					"srs" : "eqc-wgs84"
+				},
+				{
+					"extents" : 
+					{
+						"ll" : [ -20037508.342789002, -20037508.342789002 ],
+						"ur" : [ 20037508.342789002, 20037508.342789002 ]
+					},
+					"externalTexture" : true,
+					"id" : 
+					{
+						"lod" : 1,
+						"position" : [ 0, 0 ]
+					},
+					"partitioning" : "bisection",
+					"srs" : "pseudomerc"
+				},
+				{
+					"extents" : 
+					{
+						"ll" : [ 278600, 278600 ],
+						"ur" : [ 3721400, 3721400 ]
+					},
+					"externalTexture" : true,
+					"id" : 
+					{
+						"lod" : 1,
+						"position" : [ 0, 1 ]
+					},
+					"partitioning" : "bisection",
+					"srs" : "steren-wgs84"
+				},
+				{
+					"extents" : 
+					{
+						"ll" : [ 278600, 278600 ],
+						"ur" : [ 3721400, 3721400 ]
+					},
+					"externalTexture" : true,
+					"id" : 
+					{
+						"lod" : 1,
+						"position" : [ 1, 0 ]
+					},
+					"partitioning" : "bisection",
+					"srs" : "steres-wgs84"
+				}
+			]
+		},
+		"id" : "melown2015",
+		"model" : 
+		{
+			"navigationSrs" : "geographic-wgs84",
+			"physicalSrs" : "geocentric-wgs84",
+			"publicSrs" : "geographic-wgs84-egm96"
+		},
+		"parameters" : 
+		{
+			"metaBinaryOrder" : 5
+		},
+		"version" : 1
+	},
+	"services" : 
+	{
+		"atmdensity" : 
+		{
+			"url" : "//cdn.melown.com/atmdensity.png?def={param(0)}"
+		}
+	},
+	"srses" : 
+	{
+		"eqc-wgs84" : 
+		{
+			"comment" : "Projected, wgs84 equidistant cylindrical (epsg:4087)",
+			"srsDef" : "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",
+			"type" : "projected"
+		},
+		"geocentric-wgs84" : 
+		{
+			"comment" : "Geocentric, WGS84 (epsg:4978)",
+			"srsDef" : "+proj=geocent +datum=WGS84 +units=m +no_defs",
+			"type" : "cartesian"
+		},
+		"geographic-wgs84" : 
+		{
+			"comment" : "Geographic, WGS84 (epsg:4326)",
+			"srsDef" : "+proj=longlat +datum=WGS84 +no_defs",
+			"type" : "geographic"
+		},
+		"geographic-wgs84-egm96" : 
+		{
+			"comment" : "Geographic, WGS84 with EGM96 vertical (epsg:4326+5773)",
+			"geoidGrid" : 
+			{
+				"definition" : "geographic-wgs84-egm96-geoidgrid.jpg",
+				"extents" : 
+				{
+					"ll" : [ -180, -90 ],
+					"ur" : [ 180, 90 ]
+				},
+				"srsDefEllps" : "+proj=longlat +datum=WGS84 +no_defs",
+				"valueRange" : [ -107, 85.400000000000006 ]
+			},
+			"srsDef" : "+proj=longlat +datum=WGS84 +geoidgrids=egm96_15.gtx +vunits=m +no_defs",
+			"type" : "geographic"
+		},
+		"pseudomerc" : 
+		{
+			"comment" : "Projected, Web/Pseudo Mecator (epsg:3857)",
+			"periodicity" : 
+			{
+				"period" : 40075016.685578004,
+				"type" : "X"
+			},
+			"srsDef" : "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs",
+			"type" : "projected"
+		},
+		"steren-wgs84" : 
+		{
+			"comment" : "Projected, UPS north (epsg:32661)",
+			"srsDef" : "+proj=stere +lat_0=90 +lat_ts=90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +datum=WGS84 +units=m +no_defs",
+			"type" : "projected"
+		},
+		"steres-wgs84" : 
+		{
+			"comment" : "Projected, UPS south (epsg:32761)",
+			"srsDef" : "+proj=stere +lat_0=-90 +lat_ts=-90 +lon_0=0 +k=0.994 +x_0=2000000 +y_0=2000000 +datum=WGS84 +units=m +no_defs",
+			"type" : "projected"
+		}
+	},
+	"surfaces" : 
+	[
+		{
+			"id" : "world",
+			"lodRange" : [ 4, 9 ],
+			"meshUrl" : "//mapserver-3d.mapy.cz/currentStage/tilesets/world/{lod}-{x}-{y}.bin?1",
+			"metaUrl" : "//mapserver-3d.mapy.cz/currentStage/tilesets/world/{lod}-{x}-{y}.meta?1",
+			"navUrl" : "//mapserver-3d.mapy.cz/currentStage/tilesets/world/{lod}-{x}-{y}.nav?1",
+			"textureUrl" : "//mapserver-3d.mapy.cz/currentStage/tilesets/world/{lod}-{x}-{y}-{sub}.jpg?1",
+			"tileRange" : 
+			[
+				[ 0, 0 ],
+				[ 13, 13 ]
+			]
+		}
+	],
+	"version" : 1,
+	"view" : 
+	{
+		"freeLayers" : 
+		{
+			"osm" : 
+			{
+				"style" : "//cdn.melown.com/vts/melown2015/stylesheet/seznamcz-outdoor/mapycz.json"
+			},
+			"peaklist-org-ultras" : 
+			{
+				"style" : "//cdn.melown.com/vts/melown2015/stylesheet/seznamcz-outdoor/ultras.json"
+			}
+		},
+		"surfaces" : 
+		{
+			"world" : 
+			[
+				"seznamcz-outdoor",
+				"seznamcz-outdoor-north-pole",
+				"seznamcz-outdoor-south-pole"
+			]
+		}
+	}
+}
