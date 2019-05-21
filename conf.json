@@ -190,7 +190,7 @@
 			"comment" : "Geographic, WGS84 with EGM96 vertical (epsg:4326+5773)",
 			"geoidGrid" : 
 			{
-				"definition" : "geographic-wgs84-egm96-geoidgrid.jpg",
+				"definition" : "//cdn.melown.com/vts/melown2015/mapycz/live/geographic-wgs84-egm96-geoidgrid.jpg",
 				"extents" : 
 				{
 					"ll" : [ -180, -90 ],
