@@ -1,25 +1,31 @@
 {
   "constants": {
-    "@main-font": [ "noto-mix", "noto-cjk" ]
+    "@main-font": [ "noto-mix", "noto-cjk" ],
+    "@devil": [ "smiley", 54, 49, 30, 30 ],
+    "@sleepy": [ "smiley", 154, 94, 30, 30 ]
   },
   "fonts": {
     "noto-mix": "//cdn.melown.com/libs/vtsjs/fonts/noto-extended/1.0.0/noto.fnt",
     "noto-cjk": "//cdn.melown.com/libs/vtsjs/fonts/noto-cjk/1.0.0/noto.fnt",
     "#default": "//cdn.melown.com/libs/vtsjs/fonts/noto-basic/1.0.0/noto.fnt"
   },
+  "bitmaps": {
+    "smiley": "smiley.jpeg"
+  },
   "layers": {
     "state-boundaries": {
       "filter": [
         "all",
         [ "==", "#group", "boundary" ],
-        [ "==", "$admin_level", "4" ],
         [ "!=", "$maritime", "1" ]
       ],
       "line": true,
       "line-flat": false,
-      "line-width": 4,
-      "line-color": [ 255, 255, 0, 80 ],
-      "zbuffer-offset": [ -0.01, 0, 0 ]
+      "line-width": { "div": [ 50, "$admin_level" ] },
+      "_unit": "pixels here",
+      "line-color": [ 248, 222, 126, 128 ],
+      "zbuffer-offset": [ -0.2, 0, 0 ],
+      "culling": 89
     },
     "roads": {
       "filter": [
@@ -29,9 +35,11 @@
       ],
       "line": true,
       "line-flat": true,
-      "line-width": { "lod-scaled": [ 14, 10, 1 ] },
-      "line-color": [ 255, 255, 255, 120 ],
-      "zbuffer-offset": [ -10, -50, -50 ]
+      "line-width": 20,
+      "_unit": "meters here",
+      "line-color": [ 255, 0, 255, 120 ],
+      "zbuffer-offset": [ -0.2, 0, 0 ],
+      "culling": 89
     },
     "city-labels": {
       "filter": [
@@ -39,10 +47,21 @@
         [ "==", "#group", "place" ],
         [ "==", "$class", "city" ]
       ],
+      "pack": true,
+      "__importance-source": { "strlen": "$name" },
       "label": true,
-      "label-size": 19,
+      "label-stick": [ 60, 6, 2, 255, 255, 255, 128 ],
+      "label-size": { "if": [ [ "<", { "sin": { "strlen": "$name" } }, 0 ], 20, 10 ] },
       "label-font": "@main-font",
       "label-source": "$name",
+      "label-offset": [ -20, 0 ],
+      "label-origin": "bottom-left",
+      "label-no-overlap-margin": [ 0, 0 ],
+      "icon": true,
+      "icon-source": "@devil",
+      "icon-origin": "bottom-right",
+      "icon-offset": [ -20, 0 ],
+      "icon-scale": 1,
       "zbuffer-offset": [ -0.15, 0, 0 ],
       "z-index": 1,
       "culling": 89
@@ -52,11 +71,10 @@
         "all",
         [ "==", "#group", "mountain_peak" ]
       ],
-      "label": true,
-      "label-stick": [ 70, 5, 2, 255, 255, 255, 128 ],
-      "label-size": 19,
-      "label-font": "@main-font",
-      "label-source": "$name",
+      "icon": true,
+      "icon-source": "@sleepy",
+      "icon-origin": "bottom-center",
+      "icon-scale": { "mul": [ { "strlen": "$name" }, 0.04 ] },
       "zbuffer-offset": [ -0.15, 0, 0 ],
       "z-index": 1
     }
