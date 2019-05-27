@@ -47,7 +47,6 @@
         [ "==", "$class", "city" ]
       ],
       "pack": true,
-      "__importance-source": { "strlen": "$name" },
       "label": true,
       "label-stick": [ 30, 10, 10, 255, 255, 255, 128 ],
       "__label-size": { "if": [ [ "<", { "sin": { "strlen": "$name" } }, 0 ], 20, 10 ] },
