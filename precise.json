@@ -71,7 +71,7 @@
         "all",
         [ "==", "#group", "mountain_peak" ]
       ],
-      "icon": true,
+      "__icon": true,
       "icon-source": "@sleepy",
       "icon-origin": "bottom-center",
       "__icon-scale": { "mul": [ { "strlen": "$name" }, 0.04 ] },
