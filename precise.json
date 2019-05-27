@@ -48,7 +48,7 @@
       ],
       "pack": true,
       "label": true,
-      "label-stick": [ 50, 0, 10, 255, 255, 255, 128 ],
+      "label-stick": [ 50, 0, 2, 255, 255, 255, 128 ],
       "__label-size": { "if": [ [ "<", { "sin": { "strlen": "$name" } }, 0 ], 20, 10 ] },
       "label-size": 20,
       "label-font": "@main-font",
