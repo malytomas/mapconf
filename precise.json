@@ -51,7 +51,7 @@
       "label": true,
       "label-stick": [ 30, 10, 10, 255, 255, 255, 128 ],
       "__label-size": { "if": [ [ "<", { "sin": { "strlen": "$name" } }, 0 ], 20, 10 ] },
-      "label-size": 20,
+      "label-size": 13.33333,
       "label-font": "@main-font",
       "label-source": "$name",
       "label-offset": [ -20, 0 ],
@@ -61,7 +61,7 @@
       "icon-source": "@devil",
       "icon-origin": "bottom-right",
       "icon-offset": [ -20, 0 ],
-      "icon-scale": 1,
+      "icon-scale": 0.5,
       "zbuffer-offset": [ -0.15, 0, 0 ],
       "z-index": 1,
       "culling": 89
