@@ -1,0 +1,20 @@
+{
+  "compatibility-mode" : true,
+  "constants": {
+    "@main-font": [ "noto-mix", "noto-cjk" ]
+  },
+  "fonts": {
+    "noto-mix": "//cdn.melown.com/libs/vtsjs/fonts/noto-extended/1.0.0/noto.fnt",
+    "noto-cjk": "//cdn.melown.com/libs/vtsjs/fonts/noto-cjk/1.0.0/noto.fnt",
+    "#default": "//cdn.melown.com/libs/vtsjs/fonts/noto-basic/1.0.0/noto.fnt"
+  },
+  "layers": {
+    "city-labels": {
+      "label": true,
+      "label-size": 50,
+      "label-font": "@main-font",
+      "label-source": "$name",
+      "zbuffer-offset": [ -0.15, 0, 0 ]
+    }
+  }
+}

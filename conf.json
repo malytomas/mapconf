@@ -30,19 +30,20 @@
   },
   "freeLayers": {
     "osm": "//cdn.melown.com/vts/melown2015/features/global/osm-maptiler/freelayer.json",
-    "peaklist-org-ultras": "//cdn.melown.com/vts/melown2015/features/global/peaklist-org-ultras/freelayer.json"
+    "peaklist-org-ultras": "//cdn.melown.com/vts/melown2015/features/global/peaklist-org-ultras/freelayer.json",
+    "mono": "mono.json"
   },
   "position": [
     "obj",
-    14.2940579578,
-    50.0323036533,
-    "fixed",
-    -250.23,
-    -164,
-    -21,
-    0,
-    41711,
-    45
+    14.471105,
+    50.079154,
+    "fix",
+    302.58,
+    -9.66,
+    -39.63,
+    0.00,
+    76333.39,
+    23.03
   ],
   "referenceFrame": {
     "body": "Earth",
@@ -207,19 +208,27 @@
   },
   "view": {
     "freeLayers": {
-      "osm": {
-        "style": "compat.json?31"
-      }
+      "mono": {}
     },
     "surfaces": {
       "world": []
     }
   },
   "namedViews": {
+    "compat": {
+      "freeLayers": {
+        "osm": {
+          "style": "compat.json?32"
+        }
+      },
+      "surfaces": {
+        "world": []
+      }
+    },
     "precise": {
       "freeLayers": {
         "osm": {
-          "style": "precise.json?31"
+          "style": "precise.json?32"
         }
       },
       "surfaces": {
@@ -228,12 +237,8 @@
     },
     "original": {
       "freeLayers": {
-        "osm": {
-          "style": "//cdn.melown.com/vts/melown2015/stylesheet/seznamcz-outdoor/mapycz.json"
-        },
-        "peaklist-org-ultras": {
-          "style": "//cdn.melown.com/vts/melown2015/stylesheet/seznamcz-outdoor/ultras.json"
-        }
+        "osm": {},
+        "peaklist-org-ultras": {}
       },
       "surfaces": {
         "world": [
