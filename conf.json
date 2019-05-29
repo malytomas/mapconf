@@ -208,13 +208,23 @@
   },
   "view": {
     "freeLayers": {
-      "mono": {}
+      "osm": {
+        "style": "compat.json"
+      }
     },
     "surfaces": {
       "world": []
     }
   },
   "namedViews": {
+    "mono": {
+      "freeLayers": {
+        "mono": {}
+      },
+      "surfaces": {
+        "world": []
+      }
+    },
     "compat": {
       "freeLayers": {
         "osm": {
