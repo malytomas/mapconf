@@ -23,7 +23,6 @@
       "__line": true,
       "line-flat": false,
       "line-width": { "div": [ 50, "$admin_level" ] },
-      "_unit": "pixels here",
       "line-color": [ 248, 222, 126, 128 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
       "culling": 89
@@ -37,7 +36,6 @@
       "__line": true,
       "line-flat": true,
       "line-width": 20,
-      "_unit": "meters here",
       "line-color": [ 255, 0, 255, 120 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
       "culling": 89
@@ -51,17 +49,6 @@
       "pack": true,
       "label": true,
       "label-stick": [ 50, 0, 10, 255, 255, 255, 128 ],
-      "__label-size": {
-        "if": [
-          [
-            "<",
-            { "sin": { "strlen": "$name" } },
-            0
-          ],
-          20,
-          10
-        ]
-      },
       "label-size": 20,
       "label-font": "@main-font",
       "label-source": "$name",
@@ -95,15 +82,9 @@
         "all",
         [ "==", "#group", "mountain_peak" ]
       ],
-      "__icon": true,
+      "icon": true,
       "icon-source": "@sleepy",
       "icon-origin": "bottom-center",
-      "__icon-scale": {
-        "mul": [
-          { "strlen": "$name" },
-          0.04
-        ]
-      },
       "icon-scale": 1,
       "zbuffer-offset": [ -0.15, 0, 0 ],
       "z-index": 1

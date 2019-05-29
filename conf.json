@@ -31,7 +31,7 @@
   "freeLayers": {
     "osm": "//cdn.melown.com/vts/melown2015/features/global/osm-maptiler/freelayer.json",
     "peaklist-org-ultras": "//cdn.melown.com/vts/melown2015/features/global/peaklist-org-ultras/freelayer.json",
-    "mono": "mono-layer.json?12"
+    "mono": "mono-layer.json?13"
   },
   "position": [
     "obj",
@@ -218,7 +218,7 @@
     "compat": {
       "freeLayers": {
         "osm": {
-          "style": "compat.json?33"
+          "style": "compat.json?34"
         }
       },
       "surfaces": {
@@ -228,7 +228,7 @@
     "precise": {
       "freeLayers": {
         "osm": {
-          "style": "precise.json?33"
+          "style": "precise.json?34"
         }
       },
       "surfaces": {
