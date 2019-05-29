@@ -84,7 +84,7 @@
       ],
       "icon": true,
       "icon-source": "@sleepy",
-      "icon-origin": "bottom-center",
+      "icon-origin": "center-center",
       "icon-scale": 1,
       "zbuffer-offset": [ -0.15, 0, 0 ],
       "z-index": 1
