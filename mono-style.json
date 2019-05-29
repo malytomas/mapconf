@@ -10,19 +10,12 @@
   },
   "layers": {
     "label": {
-      "_label": true,
+      "label": true,
       "label-size": 50,
       "label-font": "@main-font",
       "label-source": "$name",
       "label-no-overlap-margin": [ 0, 0 ],
       "zbuffer-offset": [ -0.15, 0, 0 ]
-    },
-    "center": {
-      "point": true,
-      "point-radius": 20,
-      "point-color": [ 0, 0, 255, 170 ],
-      "zbuffer-offset": [ -0.15, 0, 0 ],
-      "z-index": 5
     }
   }
 }
