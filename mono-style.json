@@ -10,7 +10,7 @@
   },
   "layers": {
     "label": {
-      "label": true,
+      "_label": true,
       "label-size": 50,
       "label-font": "@main-font",
       "label-source": "$name",
@@ -19,7 +19,7 @@
     },
     "center": {
       "point": true,
-      "point-radius": 4,
+      "point-radius": 20,
       "point-color": [ 0, 0, 255, 170 ],
       "zbuffer-offset": [ -0.15, 0, 0 ],
       "z-index": 5
