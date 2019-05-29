@@ -31,7 +31,7 @@
   "freeLayers": {
     "osm": "//cdn.melown.com/vts/melown2015/features/global/osm-maptiler/freelayer.json",
     "peaklist-org-ultras": "//cdn.melown.com/vts/melown2015/features/global/peaklist-org-ultras/freelayer.json",
-    "mono": "mono-layer.json"
+    "mono": "mono-layer.json?10"
   },
   "position": [
     "obj",
