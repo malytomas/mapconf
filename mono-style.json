@@ -19,7 +19,8 @@
       "label-font": "@main-font",
       "label-source": "$name",
       "label-no-overlap-margin": [ 0, 0 ],
-      "label-offset": [ -200, 0 ],
+      "label-offset": [ -400, 0 ],
+      "label-width": 1000,
       "zbuffer-offset": [ -0.15, 0, 0 ]
     },
     "label-bold": {
@@ -29,6 +30,7 @@
       "label-source": "$name",
       "label-no-overlap-margin": [ 0, 0 ],
       "label-offset": [ 0, 0 ],
+      "label-width": 1000,
       "zbuffer-offset": [ -0.15, 0, 0 ]
     },
     "label-italic": {
@@ -37,7 +39,8 @@
       "label-font": "@italic-font",
       "label-source": "$name",
       "label-no-overlap-margin": [ 0, 0 ],
-      "label-offset": [ 200, 0 ],
+      "label-offset": [ 400, 0 ],
+      "label-width":  1000,
       "zbuffer-offset": [ -0.15, 0, 0 ]
     }
   }
