@@ -11,7 +11,8 @@
           ],
           "id": "some-place",
           "properties": {
-            "name": "Ћирилица\nBolzano - Bozen\nĆirilica\n維基百科"
+            "name": "-",
+            "name-long": "Ћирилица\nBolzano - Bozen\nĆirilica\n維基百科"
           }
         }
       ],
