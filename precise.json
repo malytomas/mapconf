@@ -20,7 +20,7 @@
         [ "==", "#group", "boundary" ],
         [ "!=", "$maritime", "1" ]
       ],
-      "__line": true,
+      "line": true,
       "line-flat": false,
       "line-width": { "div": [ 50, "$admin_level" ] },
       "line-color": [ 248, 222, 126, 128 ],
@@ -33,7 +33,7 @@
         [ "==", "#group", "transportation" ],
         [ "in", "$class", "secondary", "tertiary" ]
       ],
-      "__line": true,
+      "line": true,
       "line-flat": true,
       "line-width": 20,
       "line-color": [ 255, 0, 255, 120 ],
