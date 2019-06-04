@@ -18,11 +18,12 @@
       "filter": [
         "all",
         [ "==", "#group", "boundary" ],
+        [ "==", "$admin_level", "10" ],
         [ "!=", "$maritime", "1" ]
       ],
       "line": true,
       "line-flat": false,
-      "line-width": { "div": [ 50, "$admin_level" ] },
+      "line-width": 20,
       "line-color": [ 248, 222, 126, 128 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
       "culling": 89
@@ -31,11 +32,11 @@
       "filter": [
         "all",
         [ "==", "#group", "transportation" ],
-        [ "in", "$class", "secondary", "tertiary" ]
+        [ "in", "$class", "secondary" ]
       ],
       "line": true,
       "line-flat": true,
-      "line-width": 20,
+      "line-width": 100,
       "line-color": [ 255, 0, 255, 120 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
       "culling": 89
