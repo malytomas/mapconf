@@ -35,14 +35,14 @@
   },
   "position": [
     "obj",
-    14.393845,
-    50.081455,
+    14.390818,
+    50.185969,
     "fix",
-    261.41,
-    -31.93,
-    -27.23,
+    322.04,
+    232.93,
+    -27.89,
     0.00,
-    1924.66,
+    5655.26,
     45.00
   ],
   "referenceFrame": {
@@ -209,7 +209,7 @@
   "view": {
     "freeLayers": {
       "osm": {
-        "style": "compat.json?44"
+        "style": "compat.json?48"
       }
     },
     "surfaces": {
@@ -228,7 +228,7 @@
     "compat": {
       "freeLayers": {
         "osm": {
-          "style": "compat.json?44"
+          "style": "compat.json?48"
         }
       },
       "surfaces": {
@@ -238,7 +238,7 @@
     "precise": {
       "freeLayers": {
         "osm": {
-          "style": "precise.json?44"
+          "style": "precise.json?48"
         }
       },
       "surfaces": {

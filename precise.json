@@ -14,21 +14,7 @@
     "smiley": "smiley.jpeg"
   },
   "layers": {
-    "state-boundaries": {
-      "filter": [
-        "all",
-        [ "==", "#group", "boundary" ],
-        [ "==", "$admin_level", "10" ],
-        [ "!=", "$maritime", "1" ]
-      ],
-      "line": true,
-      "line-flat": false,
-      "line-width": 20,
-      "line-color": [ 248, 222, 126, 128 ],
-      "zbuffer-offset": [ -0.2, 0, 0 ],
-      "culling": 89
-    },
-    "roads": {
+    "roads-flat": {
       "filter": [
         "all",
         [ "==", "#group", "transportation" ],
@@ -37,63 +23,51 @@
       "line": true,
       "line-flat": true,
       "line-width": 100,
-      "line-color": [ 255, 0, 255, 120 ],
+      "line-color": [ 255, 0, 0, 120 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
-      "culling": 89
-    },
-    "city-labels": {
-      "filter": [
-        "all",
-        [ "==", "#group", "place" ],
-        [ "==", "$class", "city" ]
-      ],
-      "pack": true,
-      "label": true,
-      "label-stick": [ 50, 0, 10, 255, 255, 255, 128 ],
-      "label-size": 15.2,
-      "label-font": "@main-font",
-      "label-source": "$name",
-      "label-offset": [ -20, 0 ],
-      "label-origin": "bottom-left",
-      "label-no-overlap-margin": [ 10, 10 ],
-      "label-no-overlap": true,
-      "icon": true,
-      "icon-source": "@devil",
-      "icon-origin": "bottom-right",
-      "icon-offset": [ -20, 0 ],
-      "icon-no-overlap-margin": [ 10, 10 ],
-      "icon-no-overlap": true,
-      "icon-scale": 0.5,
-      "zbuffer-offset": [ -0.15, 0, 0 ],
       "z-index": 1,
       "culling": 89
     },
-    "town-labels": {
+    "roads-screen": {
+      "filter": [
+        "all",
+        [ "==", "#group", "transportation" ],
+        [ "in", "$class", "tertiary" ]
+      ],
+      "line": true,
+      "line-flat": false,
+      "line-width": 10,
+      "line-color": [ 0, 0, 255, 120 ],
+      "zbuffer-offset": [ -0.2, 0, 0 ],
+      "z-index": 3,
+      "culling": 89
+    },
+    "towns-flat": {
       "filter": [
         "all",
         [ "==", "#group", "place" ],
         [ "==", "$class", "town" ]
       ],
       "point": true,
-      "point-radius": 3,
-      "point-color": [ 0, 0, 255, 128 ],
-      "zbuffer-offset": [ -0.15, 0, 0 ],
-      "z-index": 1,
+      "point-flat": true,
+      "point-radius": 200,
+      "point-color": [ 255, 120, 0, 120 ],
+      "zbuffer-offset": [ -0.2, 0, 0 ],
+      "z-index": 2,
       "culling": 89
     },
-    "peaks": {
+    "towns-screen": {
       "filter": [
         "all",
         [ "==", "#group", "mountain_peak" ]
       ],
-      "icon": true,
-      "icon-source": "@sleepy",
-      "icon-origin": "center-center",
-      "icon-no-overlap-margin": [ 10, 10 ],
-      "icon-no-overlap": true,
-      "icon-scale": 0.5,
-      "zbuffer-offset": [ -0.15, 0, 0 ],
-      "z-index": 1
+      "point": true,
+      "point-flat": false,
+      "point-radius": 30,
+      "point-color": [ 0, 120, 255, 120 ],
+      "zbuffer-offset": [ -0.2, 0, 0 ],
+      "z-index": 4,
+      "culling": 89
     }
   }
 }
