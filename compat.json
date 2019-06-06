@@ -14,57 +14,59 @@
     "smiley": "smiley.jpeg"
   },
   "layers": {
-    "roads-flat": {
+    "icons-flat-ratio": {
       "filter": [
         "all",
         [ "==", "#group", "transportation" ],
         [ "in", "$class", "secondary" ]
       ],
-      "line": true,
-      "line-flat": true,
-      "line-width": 100,
-      "line-color": [ 255, 0, 0, 120 ],
+      "point": true,
+      "point-flat": true,
+      "point-radius": 0.1,
+      "point-radius-units": "ratio",
+      "point-color": [ 255, 0, 0, 120 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
-      "z-index": 1,
+      "z-index": 2,
       "culling": 89
     },
-    "roads-screen": {
+    "icons-screen-ratio": {
       "filter": [
         "all",
         [ "==", "#group", "transportation" ],
         [ "in", "$class", "tertiary" ]
       ],
-      "line": true,
-      "line-flat": false,
-      "line-width": 10,
-      "line-color": [ 0, 0, 255, 120 ],
+      "point": true,
+      "point-flat": false,
+      "point-radius": 0.1,
+      "point-radius-units": "ratio",
+      "point-color": [ 0, 0, 255, 120 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
-      "z-index": 3,
+      "z-index": 4,
       "culling": 89
     },
-    "towns-flat": {
+    "icons-flat": {
       "filter": [
         "all",
         [ "==", "#group", "place" ],
         [ "==", "$class", "town" ]
       ],
       "point": true,
-      "point-flat":  true,
+      "point-flat": true,
       "point-radius": 200,
-      "point-color": [ 255, 120, 0, 120 ],
+      "point-color": [ 255, 255, 0, 120 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
       "z-index": 2,
       "culling": 89
     },
-    "towns-screen": {
+    "icons-screen": {
       "filter": [
         "all",
         [ "==", "#group", "mountain_peak" ]
       ],
       "point": true,
       "point-flat": false,
-      "point-radius": 30,
-      "point-color": [ 0, 120, 255, 120 ],
+      "point-radius": 40,
+      "point-color": [ 0, 255, 255, 120 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
       "z-index": 4,
       "culling": 89
