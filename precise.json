@@ -17,7 +17,7 @@
     "lines": {
       "filter": [ "==", "#group", "transportation" ],
       "line": true,
-      "line-flat": true,
+      "line-flat": false,
       "line-width": 0.01,
       "line-width-units": "ratio",
       "line-color": [ 255, 0, 0, 120 ],
