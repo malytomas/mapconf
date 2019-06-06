@@ -17,12 +17,22 @@
     "icons-flat-ratio": {
       "filter": [
         "all",
-        [ "==", "#group", "transportation" ],
-        [ "in", "$class", "secondary" ]
+        [ "==", "#group", "place" ],
+        [ "==", "$class", "town" ],
+        [
+          "==",
+          {
+            "mod": [
+              { "strlen": "$name" },
+              4
+            ]
+          },
+          0
+        ]
       ],
       "point": true,
       "point-flat": true,
-      "point-radius": 0.1,
+      "point-radius": 0.02,
       "point-radius-units": "ratio",
       "point-color": [ 255, 0, 0, 120 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
@@ -32,12 +42,22 @@
     "icons-screen-ratio": {
       "filter": [
         "all",
-        [ "==", "#group", "transportation" ],
-        [ "in", "$class", "tertiary" ]
+        [ "==", "#group", "place" ],
+        [ "==", "$class", "town" ],
+        [
+          "==",
+          {
+            "mod": [
+              { "strlen": "$name" },
+              4
+            ]
+          },
+          1
+        ]
       ],
       "point": true,
       "point-flat": false,
-      "point-radius": 0.1,
+      "point-radius": 0.02,
       "point-radius-units": "ratio",
       "point-color": [ 0, 0, 255, 120 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
@@ -48,11 +68,21 @@
       "filter": [
         "all",
         [ "==", "#group", "place" ],
-        [ "==", "$class", "town" ]
+        [ "==", "$class", "town" ],
+        [
+          "==",
+          {
+            "mod": [
+              { "strlen": "$name" },
+              4
+            ]
+          },
+          2
+        ]
       ],
       "point": true,
       "point-flat": true,
-      "point-radius": 50,
+      "point-radius": 500,
       "point-color": [ 255, 255, 0, 120 ],
       "zbuffer-offset": [ -0.2, 0, 0 ],
       "z-index": 2,
@@ -61,7 +91,18 @@
     "icons-screen": {
       "filter": [
         "all",
-        [ "==", "#group", "mountain_peak" ]
+        [ "==", "#group", "place" ],
+        [ "==", "$class", "town" ],
+        [
+          "==",
+          {
+            "mod": [
+              { "strlen": "$name" },
+              4
+            ]
+          },
+          3
+        ]
       ],
       "point": true,
       "point-flat": false,
