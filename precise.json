@@ -18,10 +18,10 @@
       "filter": [ "==", "#group", "transportation" ],
       "line": true,
       "line-flat": false,
-      "line-width": 0.01,
+      "line-width": 0.05,
       "line-width-units": "ratio",
       "line-color": [ 255, 0, 0, 120 ],
-      "zbuffer-offset": [ -0.2, 0, 0 ],
+      "zbuffer-offset": [ -10, 0, 0 ],
       "z-index": 1,
       "culling": 89
     }

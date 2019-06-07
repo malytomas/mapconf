@@ -35,15 +35,15 @@
   },
   "position": [
     "obj",
-    14.390818,
-    50.185969,
-    "fix",
-    322.04,
-    232.93,
-    -27.89,
-    0.00,
-    5655.26,
-    45.00
+    14.3388444834,
+    50.2621806812,
+    "fixed",
+    -250.2259826660,
+    -0.0399481106,
+    -90.0000000000,
+    0.0000000000,
+    1341.8163328264,
+    45.0000000000
   ],
   "referenceFrame": {
     "body": "Earth",
@@ -209,7 +209,7 @@
   "view": {
     "freeLayers": {
       "osm": {
-        "style": "compat.json?59"
+        "style": "compat.json?61"
       }
     },
     "surfaces": {
@@ -228,7 +228,7 @@
     "compat": {
       "freeLayers": {
         "osm": {
-          "style": "compat.json?59"
+          "style": "compat.json?61"
         }
       },
       "surfaces": {
@@ -238,7 +238,7 @@
     "precise": {
       "freeLayers": {
         "osm": {
-          "style": "precise.json?59"
+          "style": "precise.json?61"
         }
       },
       "surfaces": {
