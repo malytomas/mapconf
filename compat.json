@@ -3,12 +3,30 @@
   "constants": {
     "@main-font": [ "noto-mix", "noto-cjk" ],
     "@smileys": [
-      [ "smiley", 54, 49, 30, 30 ],
-      [ "smiley", 154, 94, 30, 30 ],
-      [ "smiley", 7, 5, 27, 27 ],
-      [ "smiley", 7, 51, 27, 27 ],
-      [ "smiley", 56, 97, 27, 27 ],
-      [ "smiley", 106, 143, 26, 27 ]
+      [
+        0,
+        [ "smiley", 54, 49, 30, 30 ]
+      ],
+      [
+        1,
+        [ "smiley", 154, 94, 30, 30 ]
+      ],
+      [
+        2,
+        [ "smiley", 7, 5, 27, 27 ]
+      ],
+      [
+        3,
+        [ "smiley", 7, 51, 27, 27 ]
+      ],
+      [
+        4,
+        [ "smiley", 56, 97, 27, 27 ]
+      ],
+      [
+        5,
+        [ "smiley", 106, 143, 26, 27 ]
+      ]
     ],
     "@smiley": {
       "map": [
@@ -45,10 +63,10 @@
       "icon": true,
       "icon-source": "@smiley",
       "icon-origin": "bottom-right",
-      "icon-offset": [ -20, 0 ],
+      "icon-offset": [ -25, 0 ],
       "icon-no-overlap-margin": [ 10, 10 ],
       "icon-no-overlap": true,
-      "icon-scale": 1,
+      "icon-scale": 2,
       "zbuffer-offset": [ -0.15, 0, 0 ],
       "culling": 89
     }
