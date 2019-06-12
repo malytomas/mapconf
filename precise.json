@@ -1,9 +1,27 @@
 {
-  "compatibility-mode" : false,
+  "compatibility-mode": false,
   "constants": {
     "@main-font": [ "noto-mix", "noto-cjk" ],
-    "@devil": [ "smiley", 54, 49, 30, 30 ],
-    "@sleepy": [ "smiley", 154, 94, 30, 30 ]
+    "@smileys": [
+      [ "smiley", 54, 49, 30, 30 ],
+      [ "smiley", 154, 94, 30, 30 ],
+      [ "smiley", 7, 5, 27, 27 ],
+      [ "smiley", 7, 51, 27, 27 ],
+      [ "smiley", 56, 97, 27, 27 ],
+      [ "smiley", 106, 143, 26, 27 ]
+    ],
+    "@smiley": {
+      "map": [
+        {
+          "mod": [
+            { "strlen": "$name" },
+            6
+          ]
+        },
+        "@smileys",
+        "blah"
+      ]
+    }
   },
   "fonts": {
     "noto-mix": "//cdn.melown.com/libs/vtsjs/fonts/noto-extended/1.0.0/noto.fnt",
@@ -11,45 +29,18 @@
     "#default": "//cdn.melown.com/libs/vtsjs/fonts/noto-basic/1.0.0/noto.fnt"
   },
   "bitmaps": {
-    "smiley": "smiley.jpeg"
+    "smiley": "smiley.png"
   },
   "layers": {
-    "state-boundaries": {
+    "places": {
       "filter": [
         "all",
-        [ "==", "#group", "boundary" ],
-        [ "!=", "$maritime", "1" ]
-      ],
-      "__line": true,
-      "line-flat": false,
-      "line-width": { "div": [ 50, "$admin_level" ] },
-      "line-color": [ 248, 222, 126, 128 ],
-      "zbuffer-offset": [ -0.2, 0, 0 ],
-      "culling": 89
-    },
-    "roads": {
-      "filter": [
-        "all",
-        [ "==", "#group", "transportation" ],
-        [ "in", "$class", "secondary", "tertiary" ]
-      ],
-      "__line": true,
-      "line-flat": true,
-      "line-width": 20,
-      "line-color": [ 255, 0, 255, 120 ],
-      "zbuffer-offset": [ -0.2, 0, 0 ],
-      "culling": 89
-    },
-    "city-labels": {
-      "filter": [
-        "all",
-        [ "==", "#group", "place" ],
-        [ "==", "$class", "city" ]
+        [ "==", "#group", "place" ]
       ],
       "pack": true,
       "label": true,
       "label-stick": [ 50, 0, 10, 255, 255, 255, 128 ],
-      "label-size": 15.2,
+      "label-size": 20,
       "label-font": "@main-font",
       "label-source": "$name",
       "label-offset": [ -20, 0 ],
@@ -57,42 +48,14 @@
       "label-no-overlap-margin": [ 10, 10 ],
       "label-no-overlap": true,
       "icon": true,
-      "icon-source": "@devil",
+      "icon-source": "@smiley",
       "icon-origin": "bottom-right",
       "icon-offset": [ -20, 0 ],
       "icon-no-overlap-margin": [ 10, 10 ],
       "icon-no-overlap": true,
-      "icon-scale": 0.5,
+      "icon-scale": 2,
       "zbuffer-offset": [ -0.15, 0, 0 ],
-      "z-index": 1,
       "culling": 89
-    },
-    "town-labels": {
-      "filter": [
-        "all",
-        [ "==", "#group", "place" ],
-        [ "==", "$class", "town" ]
-      ],
-      "point": true,
-      "point-radius": 3,
-      "point-color": [ 0, 0, 255, 128 ],
-      "zbuffer-offset": [ -0.15, 0, 0 ],
-      "z-index": 1,
-      "culling": 89
-    },
-    "peaks": {
-      "filter": [
-        "all",
-        [ "==", "#group", "mountain_peak" ]
-      ],
-      "icon": true,
-      "icon-source": "@sleepy",
-      "icon-origin": "center-center",
-      "icon-no-overlap-margin": [ 10, 10 ],
-      "icon-no-overlap": true,
-      "icon-scale": 0.5,
-      "zbuffer-offset": [ -0.15, 0, 0 ],
-      "z-index": 1
     }
   }
 }
