@@ -6,7 +6,7 @@
       "map": [
         {
           "mod": [
-            { "strlen": "$name" },
+            { "round": { "random": [ 0, 1000 ] } },
             6
           ]
         },
@@ -54,6 +54,7 @@
         "all",
         [ "==", "#group", "place" ]
       ],
+      "importance-source": 0,
       "pack": true,
       "label": true,
       "label-stick": [ 50, 0, 10, 255, 255, 255, 128 ],
