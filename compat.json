@@ -54,7 +54,7 @@
         "all",
         [ "==", "#group", "place" ]
       ],
-      "importance-source": 0,
+      "importance-source": 1,
       "pack": true,
       "label": true,
       "label-stick": [ 50, 0, 10, 255, 255, 255, 128 ],
