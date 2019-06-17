@@ -49,41 +49,5 @@
     "smiley": "smiley.png"
   },
   "layers": {
-    "places": {
-      "filter": [
-        "all",
-        [ "==", "#group", "place" ]
-      ],
-      "importance-source": 1,
-      "pack": true,
-      "label": true,
-      "label-stick": [ 50, 0, 10, 255, 255, 255, 128 ],
-      "label-size": 15.2,
-      "label-font": "@main-font",
-      "label-source": "$name",
-      "label-offset": [ -20, 0 ],
-      "label-origin": "bottom-left",
-      "label-no-overlap-margin": [ 10, 10 ],
-      "label-no-overlap": true,
-      "icon": true,
-      "icon-source": "@smiley",
-      "icon-origin": "bottom-right",
-      "icon-offset": [ -25, 0 ],
-      "icon-no-overlap-margin": [ 10, 10 ],
-      "icon-no-overlap": true,
-      "icon-scale": 1,
-      "point": true,
-      "point-flat": true,
-      "point-radius": 0.02,
-      "point-radius-units": "ratio",
-      "point-color": [
-        { "random": [ 0, 255 ] },
-        { "random": [ 0, 255 ] },
-        { "random": [ 0, 255 ] },
-        128
-      ],
-      "zbuffer-offset": [ -0.15, 0, 0 ],
-      "culling": 89
-    }
   }
 }

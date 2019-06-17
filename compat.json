@@ -49,41 +49,118 @@
     "smiley": "smiley.png"
   },
   "layers": {
-    "places": {
+    "country-boundaries": {
       "filter": [
         "all",
-        [ "==", "#group", "place" ]
+        [ "==", "#group", "boundary" ],
+        [ "==", "$admin_level", "2" ],
+        [ "!=", "$maritime", "1" ]
       ],
-      "importance-source": 1,
-      "pack": true,
+      "line": true,
+      "line-flat": false,
+      "line-width": 8,
+      "line-color": [ 0, 0, 255, 200 ],
+      "zbuffer-offset": [ -0.15, -10, -10 ],
+      "culling": 60
+    },
+    "state-boundaries": {
+      "filter": [
+        "all",
+        [ "==", "#group", "boundary" ],
+        [ "==", "$admin_level", "4" ],
+        [ "!=", "$maritime", "1" ]
+      ],
+      "line": true,
+      "line-flat": false,
+      "line-width": 5,
+      "line-color": [ 255, 255, 0, 80 ],
+      "zbuffer-offset": [ -0.15, -10, -10 ],
+      "culling": 60
+    },
+    "highways": {
+      "filter": [
+        "all",
+        [ "==", "#group", "transportation" ],
+        [ "in", "$class", "primary", "highway", "trunk" ]
+      ],
+      "line": true,
+      "line-flat": true,
+      "line-width": 20,
+      "line-color": [ 255, 0, 0, 130 ],
+      "zbuffer-offset": [ -0.15, -10, -10 ],
+      "culling": 60
+    },
+    "roads": {
+      "filter": [
+        "all",
+        [ "==", "#group", "transportation" ],
+        [ "in", "$class", "secondary", "tertiary", "unclassified", "minor", "service", "unclassified", "residential" ]
+      ],
+      "line": true,
+      "line-flat": true,
+      "line-width": 10,
+      "line-color": [ 255, 0, 255, 100 ],
+      "zbuffer-offset": [ -0.15, -10, -10 ],
+      "culling": 60
+    },
+    "railroads": {
+      "filter": [
+        "all",
+        [ "==", "#group", "transportation" ],
+        [ "in", "$class", "railway" ]
+      ],
+      "line": true,
+      "line-flat": true,
+      "line-width": 0.05,
+      "line-width-units": "ratio",
+      "line-color": [ 0, 0, 0, 150 ],
+      "zbuffer-offset": [ -0.15, -10, -10 ],
+      "culling": 60
+    },
+    "cities": {
+      "filter": [
+        "all",
+        [ "==", "#group", "place" ],
+        [ "==", "$class", "city" ],
+        [
+          "any",
+          [ "has", "$capital" ],
+          [ "<=", "$rank", 3 ]
+        ]
+      ],
       "label": true,
-      "label-stick": [ 50, 0, 10, 255, 255, 255, 128 ],
+      "label-stick": [ 50, 0, 10, 255, 255, 0, 120 ],
       "label-size": 20,
       "label-font": "@main-font",
       "label-source": "$name",
-      "label-offset": [ -40, 0 ],
-      "label-origin": "bottom-left",
-      "label-no-overlap-margin": [ 10, 10 ],
-      "label-no-overlap": true,
+      "label-origin": "bottom-center",
+      "label-no-overlap": false,
+      "point": true,
+      "point-flat": true,
+      "point-radius": 0.03,
+      "point-radius-units": "ratio",
+      "point-color": [ 255, 255, 0, 120 ],
+      "zbuffer-offset": [ -0.15, -10, -10 ],
+      "culling": 60
+    },
+    "peaks": {
+      "filter": [
+        "all",
+        [ "==", "#group", "mountain_peak" ],
+        [ "==", "$rank", "1" ]
+      ],
       "icon": true,
+      "icon-stick": [ 50, 0, 5, 0, 255, 0, 120 ],
       "icon-source": "@smiley",
-      "icon-origin": "bottom-right",
-      "icon-offset": [ -25, 0 ],
-      "icon-no-overlap-margin": [ 10, 10 ],
-      "icon-no-overlap": true,
-      "icon-scale": 2,
+      "icon-origin": "bottom-center",
+      "icon-no-overlap": false,
       "point": true,
       "point-flat": true,
       "point-radius": 0.02,
       "point-radius-units": "ratio",
-      "point-color": [
-        { "random": [ 0, 255 ] },
-        { "random": [ 0, 255 ] },
-        { "random": [ 0, 255 ] },
-        128
-      ],
-      "zbuffer-offset": [ -0.15, 0, 0 ],
-      "culling": 89
+      "point-color": [ 0, 255, 0, 120 ],
+      "zbuffer-offset": [ -0.15, -10, -10 ],
+      "culling": 60
     }
   }
 }
