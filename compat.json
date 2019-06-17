@@ -60,8 +60,8 @@
       "line-flat": false,
       "line-width": 8,
       "line-color": [ 0, 0, 255, 200 ],
-      "zbuffer-offset": [ -0.15, -10, -10 ],
-      "culling": 60
+      "zbuffer-offset": [ -0.15, 0, 0 ],
+      "culling": 88
     },
     "state-boundaries": {
       "filter": [
@@ -74,8 +74,8 @@
       "line-flat": false,
       "line-width": 5,
       "line-color": [ 255, 255, 0, 80 ],
-      "zbuffer-offset": [ -0.15, -10, -10 ],
-      "culling": 60
+      "zbuffer-offset": [ -0.15, 0, 0 ],
+      "culling": 88
     },
     "highways": {
       "filter": [
@@ -87,8 +87,8 @@
       "line-flat": true,
       "line-width": 20,
       "line-color": [ 255, 0, 0, 130 ],
-      "zbuffer-offset": [ -0.15, -10, -10 ],
-      "culling": 60
+      "zbuffer-offset": [ -0.15, 0, 0 ],
+      "culling": 88
     },
     "roads": {
       "filter": [
@@ -100,22 +100,8 @@
       "line-flat": true,
       "line-width": 10,
       "line-color": [ 255, 0, 255, 100 ],
-      "zbuffer-offset": [ -0.15, -10, -10 ],
-      "culling": 60
-    },
-    "railroads": {
-      "filter": [
-        "all",
-        [ "==", "#group", "transportation" ],
-        [ "in", "$class", "railway" ]
-      ],
-      "line": true,
-      "line-flat": true,
-      "line-width": 0.05,
-      "line-width-units": "ratio",
-      "line-color": [ 0, 0, 0, 150 ],
-      "zbuffer-offset": [ -0.15, -10, -10 ],
-      "culling": 60
+      "zbuffer-offset": [ -0.15, 0, 0 ],
+      "culling": 88
     },
     "cities": {
       "filter": [
@@ -140,8 +126,8 @@
       "point-radius": 0.03,
       "point-radius-units": "ratio",
       "point-color": [ 255, 255, 0, 120 ],
-      "zbuffer-offset": [ -0.15, -10, -10 ],
-      "culling": 60
+      "zbuffer-offset": [ -0.15, 0, 0 ],
+      "culling": 88
     },
     "peaks": {
       "filter": [
@@ -159,8 +145,8 @@
       "point-radius": 0.02,
       "point-radius-units": "ratio",
       "point-color": [ 0, 255, 0, 120 ],
-      "zbuffer-offset": [ -0.15, -10, -10 ],
-      "culling": 60
+      "zbuffer-offset": [ -0.15, 0, 0 ],
+      "culling": 88
     }
   }
 }
