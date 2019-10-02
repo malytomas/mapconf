@@ -34,16 +34,7 @@
     "mono": "mono-layer.json?105"
   },
   "position": [
-    "obj",
-    14.57978750486269,
-    49.98302090558479,
-    "fix",
-    436.86,
-    9.29,
-    -24.77,
-    0.00,
-    193659.56,
-    45.00
+    "obj",14.431566,50.061258,"fix",273.74,64.61,-36.31,0.00,822.70,45.00
   ],
   "referenceFrame": {
     "body": "Earth",
@@ -209,7 +200,7 @@
   "view": {
     "freeLayers": {
       "osm": {
-        "style": "compat.json?113"
+        "style": "compat.json?114"
       }
     },
     "surfaces": {
@@ -228,7 +219,7 @@
     "compat": {
       "freeLayers": {
         "osm": {
-          "style": "compat.json?113"
+          "style": "compat.json?114"
         }
       },
       "surfaces": {
@@ -238,7 +229,7 @@
     "precise": {
       "freeLayers": {
         "osm": {
-          "style": "precise.json?113"
+          "style": "precise.json?114"
         }
       },
       "surfaces": {
