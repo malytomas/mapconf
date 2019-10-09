@@ -200,7 +200,7 @@
   "view": {
     "freeLayers": {
       "osm": {
-        "style": "compat.json?114"
+        "style": "compat.json?115"
       }
     },
     "surfaces": {
@@ -219,7 +219,7 @@
     "compat": {
       "freeLayers": {
         "osm": {
-          "style": "compat.json?114"
+          "style": "compat.json?115"
         }
       },
       "surfaces": {
@@ -229,7 +229,7 @@
     "precise": {
       "freeLayers": {
         "osm": {
-          "style": "precise.json?114"
+          "style": "precise.json?115"
         }
       },
       "surfaces": {

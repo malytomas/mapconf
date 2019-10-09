@@ -67,7 +67,6 @@
     },
     "roads-major-label": {
       "filter": ["all",["==","#group","transportation_name"],["in","$class","primary","highway","trunk"]],
-      "visible": {"discrete":[[15,false],[16,true]]},
       "line-label": true,
       "line-label-font": "@main-font",
       "line-label-size": 25,
@@ -78,7 +77,6 @@
     },
     "roads-minor-label": {
       "filter": ["all",["==","#group","transportation_name"],["in","$class","secondary","tertiary","unclassified","minor","service","unclassified","residential","path"]],
-      "visible": {"discrete":[[15,false],[16,true]]},
       "line-label": true,
       "line-label-font": "@main-font",
       "line-label-size": 25,
