@@ -26,7 +26,19 @@
   "boundLayers": {
     "seznamcz-outdoor": "//cdn.melown.com/vts/melown2015/imagery/global/seznamcz-outdoor/boundlayer.json",
     "seznamcz-outdoor-north-pole": "//cdn.melown.com/vts/melown2015/imagery/global/seznamcz-outdoor-north-pole/boundlayer.json",
-    "seznamcz-outdoor-south-pole": "//cdn.melown.com/vts/melown2015/imagery/global/seznamcz-outdoor-south-pole/boundlayer.json"
+    "seznamcz-outdoor-south-pole": "//cdn.melown.com/vts/melown2015/imagery/global/seznamcz-outdoor-south-pole/boundlayer.json",
+	"bing" : {
+		"credits" : [ "microsoft" ],
+		"lodRange" : [ 10, 20 ],
+		"maskUrl" : "//mapserver-3d.mapy.cz/mapproxy/melown2015/tms/melown/bing/{lod}-{x}-{y}.mask",
+		"tileRange" : 
+		[
+			[ 0, 0 ],
+			[ 16383, 16383 ]
+		],
+		"type" : "raster",
+		"url" : "//mapserver.mapy.cz/bing/{loclod}-{locx}-{locy}"
+	}
   },
   "freeLayers": {
     "osm": "//cdn.melown.com/vts/melown2015/features/global/osm-maptiler/freelayer.json",
@@ -181,14 +193,26 @@
   "surfaces": [
     {
       "id": "world",
-      "lodRange": [ 4, 9 ],
-      "meshUrl": "//mapserver-3d.mapy.cz/currentStage/tilesets/world/{lod}-{x}-{y}.bin?1",
-      "metaUrl": "//mapserver-3d.mapy.cz/currentStage/tilesets/world/{lod}-{x}-{y}.meta?1",
-      "navUrl": "//mapserver-3d.mapy.cz/currentStage/tilesets/world/{lod}-{x}-{y}.nav?1",
-      "textureUrl": "//mapserver-3d.mapy.cz/currentStage/tilesets/world/{lod}-{x}-{y}-{sub}.jpg?1",
+      "lodRange": [ 1, 21 ],
+      "meshUrl": "//cdn.melown.com/vts/melown2015/terrain/global/viewfinder3/{lod}-{x}-{y}.bin?0",
+      "metaUrl": "//cdn.melown.com/vts/melown2015/terrain/global/viewfinder3/{lod}-{x}-{y}.meta?0",
+      "navUrl": "//cdn.melown.com/vts/melown2015/terrain/global/viewfinder3/{lod}-{x}-{y}.nav?0",
+      "textureUrl": "//cdn.melown.com/vts/melown2015/terrain/global/viewfinder3/{lod}-{x}-{y}.jpg?0",
       "tileRange": [
         [ 0, 0 ],
-        [ 13, 13 ]
+        [ 1, 1 ]
+      ]
+    },
+    {
+      "id": "ev2",
+      "lodRange": [ 16, 21 ],
+      "meshUrl": "//cdn.melown.com/mario/store/melown2015/stage/tilesets/melown-ev2@2/{lod}-{x}-{y}.bin?0",
+      "metaUrl": "//cdn.melown.com/mario/store/melown2015/stage/tilesets/melown-ev2@2/{lod}-{x}-{y}.meta?0",
+      "navUrl": "//cdn.melown.com/mario/store/melown2015/stage/tilesets/melown-ev2@2/{lod}-{x}-{y}.nav?0",
+      "textureUrl": "//cdn.melown.com/mario/store/melown2015/stage/tilesets/melown-ev2@2/{lod}-{x}-{y}-{sub}.jpg?0",
+      "tileRange": [
+        [ 17480, 10957 ],
+        [ 18105, 11318 ]
       ]
     }
   ],
@@ -204,7 +228,7 @@
       }
     },
     "surfaces": {
-      "world": []
+      "world": [ "bing" ]
     }
   },
   "namedViews": {
@@ -213,7 +237,7 @@
         "mono": {}
       },
       "surfaces": {
-        "world": []
+        "world": [ "bing" ]
       }
     },
     "compat": {
@@ -223,7 +247,7 @@
         }
       },
       "surfaces": {
-        "world": []
+        "world": [ "bing" ]
       }
     },
     "precise": {
@@ -233,7 +257,7 @@
         }
       },
       "surfaces": {
-        "world": []
+        "world": [ "bing" ]
       }
     },
     "original": {
