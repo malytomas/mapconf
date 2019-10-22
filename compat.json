@@ -73,7 +73,8 @@
       "line-label-color": [255,255,255,255],
       "line-label-type": "screen-flat",
       "line-label-no-overlap-margin": 2,
-      "zbuffer-offset": [-11,-50,-50]
+      "zbuffer-offset": [-11,-50,-50],
+      "hysteresis": [1500,1500,"{$name}-{#lod}-{#ix}-{#iy}",true]
     },
     "roads-minor-label": {
       "filter": ["all",["==","#group","transportation_name"],["in","$class","secondary","tertiary","unclassified","minor","service","unclassified","residential","path"]],
@@ -83,7 +84,8 @@
       "line-label-color": [255,255,255,255],
       "line-label-type": "screen-flat",
       "line-label-no-overlap-margin": 2,
-      "zbuffer-offset": [-11,-50,-50]
+      "zbuffer-offset": [-11,-50,-50],
+      "hysteresis": [1500,1500,"{$name}-{#lod}-{#ix}-{#iy}",true]
     }
   }
 }
