@@ -3526,7 +3526,7 @@ string getCoreVersion()
 */
 
 function getCoreVersion(full) {
-    return (full ? 'Core: ' : '') + '2.22.5';
+    return (full ? 'Core: ' : '') + '2.22.6';
 }
 
 
@@ -44151,7 +44151,7 @@ RendererDraw.prototype.drawGpuJob = function(gpu, gl, renderer, job, screenPixel
 
                     for(j = 0; j < points.length; j++) {
                         pp = renderer.project2(points[j], mvp, [0,0,0], true);
-                        this.drawCircle(pp, points[j][3] *renderer.camera.scaleFactor2(pp[3])*0.5*renderer.curSize[1], 1, [255, 0, 255, 255], null, null, null, null, null);
+                        this.drawCircle(pp, points[j][3] *renderer.camera.scaleFactor2(pp[3])*0.5*renderer.curSize[1]*(renderer.curSize[0]/renderer.curSize[1]), 1, [255, 0, 255, 255], null, null, null, null, null);
                     }
                 }
             }*/
@@ -45215,8 +45215,8 @@ RendererDraw.prototype.drawGpuSubJobLineLabel = function(gpu, gl, renderer, scre
             pp = renderer.project2(job.center2, renderer.camera.mvp, renderer.cameraPosition, true);                    
         }
 
-        var targetSize = job.labelSize * 0.5 * 0.5; //last 0.5 part is to make it compatible to 2D text
-        var sizeFactor = renderer.camera.scaleFactor2(pp[3])*0.5*renderer.curSize[1];
+        var targetSize = job.labelSize * 0.5; 
+        var sizeFactor = renderer.camera.scaleFactor2(pp[3])*0.5*renderer.curSize[1]*(renderer.curSize[0]/renderer.curSize[1]);
         var labelPoints = job.labelPoints;
         var labelIndex = job.labelIndex;
         var labelMorph = 0;
@@ -50448,7 +50448,7 @@ Renderer.prototype.getScreenRay = function(screenX, screenY) {
 
     this.camera.dirty = true; //???? why is projection matrix distored so I have to refresh
 
-    //conver screen coords
+    //convert screen coords
     var x = (2.0 * screenX) / this.curSize[0] - 1.0;
     var y = 1.0 - (2.0 * screenY) / this.curSize[1];
     
@@ -50483,16 +50483,17 @@ Renderer.prototype.getScreenRay = function(screenX, screenY) {
 Renderer.prototype.hitTestGeoLayers = function(screenX, screenY, secondTexture) {
     var gl = this.gpu.gl;
 
-    //conver screen coords to texture coords
-    if (gl.checkFramebufferStatus(gl.FRAMEBUFFER) != gl.FRAMEBUFFER_COMPLETE) {
-        return [false, 0,0,0,0];
-    }
+    //probably not needed
+    //if (gl.checkFramebufferStatus(gl.FRAMEBUFFER) != gl.FRAMEBUFFER_COMPLETE) {
+      //  return [false, 0,0,0,0];
+    //}
 
     var surfaceHit = false, pixel;
 
     if (screenX >= 0 && screenX < this.curSize[0] &&
         screenY >= 0 && screenY < this.curSize[1]) {
 
+        //convert screen coords to texture coords
         var x = 0, y = 0;
 
         //get screen coords
@@ -50630,11 +50631,12 @@ Renderer.prototype.hitTest = function(screenX, screenY) {
     var screenRay = this.getScreenRay(screenX, screenY);
     var cameraPos = this.camera.getPosition();
 
-    //conver screen coords to texture coords
-    if (gl.checkFramebufferStatus(gl.FRAMEBUFFER) != gl.FRAMEBUFFER_COMPLETE) {
-        return [0, 0, 0, null, screenRay, Number.MAX_VALUE, cameraPos];
-    }
+    //probably not needed
+    //if (gl.checkFramebufferStatus(gl.FRAMEBUFFER) != gl.FRAMEBUFFER_COMPLETE) {  
+      //  return [0, 0, 0, null, screenRay, Number.MAX_VALUE, cameraPos];
+    //}
 
+    //convert screen coords to texture coords
     var x = 0, y = 0;
 
     //get screen coords
@@ -51166,8 +51168,8 @@ RendererRMap.prototype.addLineLabel = function(subjob, checkDepthMap) {
     var index = 0, pindex = 0;
     var margin = job.noOverlap ? job.noOverlap[0] : 1;
 
-    var targetSize = job.labelSize * 0.5 * 0.5;
-    var sizeFactor = renderer.camera.scaleFactor2(subjob[5][3])*0.5*renderer.curSize[1];
+    var targetSize = job.labelSize * 0.5; 
+    var sizeFactor = renderer.camera.scaleFactor2(subjob[5][3])*0.5*renderer.curSize[1]*(renderer.curSize[0]/renderer.curSize[1]);
     var pointsIndex = subjob[9];
     var labelPoints = job.labelPoints;
     var labelIndex = job.labelIndex;
